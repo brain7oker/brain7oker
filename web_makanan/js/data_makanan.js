@@ -139,7 +139,7 @@ $(document).ready(function(){
     function loadData(){
         $.ajax({ // untuk mengambil isi file json 
             type:  "GET",
-            url:   "http://localhost/web_makanan/data.json", // url file json
+            url:   "data.json", // url file json
             contentType : "application/json",
             dataType      : "json",
             success: function(responseData){ // Ketika berhasil mengambil data json
