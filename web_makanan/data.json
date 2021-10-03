@@ -1,0 +1,12 @@
+{
+	"list_makanan": [
+		
+		{"id" : 1, "nama_makanan" : "Mie Ayam"},
+		{"id" : 2, "nama_makanan" : "Bakso"},
+		{"id" : 3, "nama_makanan" : "Soto"},
+		{"id" : 4, "nama_makanan" : "Nasi Goreng"},
+		{"id" : 5, "nama_makanan" : "Mie Goreng"},
+		{"id" : 6, "nama_makanan" : "Ayam Goreng"}
+
+	]
+}

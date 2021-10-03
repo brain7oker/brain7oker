@@ -1,0 +1,51 @@
+
+
+.item > img {
+  height: 262px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 10%;
+  border-radius: 24px;
+}
+
+.item > p {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #3a3a3a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+.judul_gridlist{
+  margin-top: 16px;
+  margin-bottom: 32px;
+  color: #3a3a3a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .gridlist{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .gridlist{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+
+
+}
