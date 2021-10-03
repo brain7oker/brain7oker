@@ -1,0 +1,2 @@
+secret key recaptcha 
+secret key 6LdjtKccAAAAAE2MFXa-4ihXI8fwGCzb6hlsxebY
