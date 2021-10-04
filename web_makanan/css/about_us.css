@@ -20,6 +20,10 @@
   margin-top: 4px;
 }
 
+.text-header{
+	font-size: 50px;
+}
+
 @media only screen and (min-width: 768px) {
   /* For mobile phones: */
   .gridlist{

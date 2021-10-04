@@ -6,7 +6,9 @@
 		{"id" : 3, "nama_makanan" : "Soto"},
 		{"id" : 4, "nama_makanan" : "Nasi Goreng"},
 		{"id" : 5, "nama_makanan" : "Mie Goreng"},
-		{"id" : 6, "nama_makanan" : "Ayam Goreng"}
+		{"id" : 6, "nama_makanan" : "Ayam Goreng"},
+		{"id" : 7, "nama_makanan" : "Ketoprak"},
+		{"id" : 8, "nama_makanan" : "Sate Ayam"}
 
 	]
 }
