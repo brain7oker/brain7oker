@@ -6,7 +6,7 @@
 
 body {
   padding-top: 54px;
-  background-color:blue;
+  background-color: rgb(0, 0, 0);
 }
 
 @media (min-width: 992px) {

@@ -18,7 +18,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="login.php" class="btn btn-secondary">Masuk</a>
-                        <a href="register.php" class="btn btn-success">Daftar</a>
+                        <a href="register.php" class="btn btn-success">Daftar</a><br><br>
+                        <a href="../index.php" class="btn btn-third">Home</a>
                     </div>
                 </div>
             </div>

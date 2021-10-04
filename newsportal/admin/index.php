@@ -3,32 +3,32 @@
 //Database Configuration File
 include('includes/config.php');
 //error_reporting(0);
-if(isset($_POST['login']))
-  {
- 
-    // Getting username/ email and password
-     $uname=$_POST['username'];
+if(isset($_POST['login'])) {
+        // Getting username/ email and password
+    $uname=$_POST['username'];
     $password=$_POST['password'];
     // Fetch data from database on the basis of username/email and password
-$sql =mysqli_query($con,"SELECT AdminUserName,AdminEmailId,AdminPassword FROM tbladmin WHERE (AdminUserName='$uname' || AdminEmailId='$uname')");
- $num=mysqli_fetch_array($sql);
-if($num>0)
-{
-$hashpassword=$num['AdminPassword']; // Hashed password fething from database
-//verifying Password
-if (password_verify($password, $hashpassword)) {
-$_SESSION['login']=$_POST['username'];
-    echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
-  } else {
-echo "<script>alert('Wrong Password');</script>";
- 
-  }
+    $sql =mysqli_query($con,"SELECT AdminUserName,AdminEmailId,AdminPassword FROM tbladmin WHERE (AdminUserName='$uname' || AdminEmailId='$uname')");
+    $num=mysqli_fetch_array($sql);
+    if($num>0){
+        $hashpassword=$num['AdminPassword']; // Hashed password fething from database
+        //verifying Password
+        if (password_verify($password, $hashpassword)) {
+            $_SESSION['login']=$_POST['username'];
+            echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+        } else {
+        echo "<script>alert('Wrong Password');</script>";
+        }
+    }
+    //if username or email not found in database
+    else{
+    echo "<script>alert('User not registered with us');</script>";
+    }
+    
 }
-//if username or email not found in database
-else{
-echo "<script>alert('User not registered with us');</script>";
-  }
- 
+
+if(isset($_POST['home'])) {
+    echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
 }
 ?>
 
@@ -91,13 +91,12 @@ echo "<script>alert('User not registered with us');</script>";
                                                 <input class="form-control" type="password" name="password" required="" placeholder="Password" autocomplete="off">
                                             </div>
                                         </div>
-
-
-                     
+                                        
                                         <div class="form-group account-btn text-center m-t-10">
                                             <div class="col-xs-12">
                                                 <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" name="login">Log In</button>
-                                                </br></br><a href="dashboard.php"><button class="btn first">Home</button></a>
+                                                </br></br>
+                                                <button class="btn first" type="submit" name="home">Home</button>
                                             </div>
                                         </div>
 

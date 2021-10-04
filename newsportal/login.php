@@ -41,7 +41,7 @@ include('includes/config.php');
         if($response_arr["success"]==false)
             echo "<h2>You are spammer ! GET OUT</h2>";
     ?>
-<a href="login/index.php"><button class="btn first">As Userr</button></a>
+<a href="login/index.php"><button class="btn first">As User</button></a>
 
 <a href="admin/index.php"><button class="btn first">As Admin</button></a>
     <!-- Navigation -->
