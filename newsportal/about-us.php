@@ -24,6 +24,56 @@ include('includes/config.php');
 
   <body>
 
+
+  
+	<section class="pa-4">
+
+<div class="mt-2 mb-5">
+  <h3 class="black-color--text mb-3">Our Works</h3>
+  <p class="black-color--text line-height-base">
+    Hai semua, Terima Kasih sudah mengujungi web kita. Kami selaku CEO dan CTO serta karyawan dari Catering Maju Jaya mengucapkan semoga kalian puas dengan website ini dan dapat menggunakannya dengan baik.<br>
+    Sedikit Cerita mengenai Catering Maju Jaya. Catering Maju Jaya diciptakan oleh 2 orang yang sekarang menjabat sebagai CEO dan CTO di Catering Maju Jaya. Mereka mengembangkan usaha ini dengan tujuan mendapatkan nilai dari mata kuliah PTI di UNIVERSITAS MULTIMEDIA NUSANTARA.<br>
+    Usaha Catering Maju Jaya ini kami harap menjadi usaha yang sangat sukses di Tangerang dan akhirnya melebarkan sayap ke seluruh nusantara dan menjadi catering nomor 1 di Indonesia.
+  </p>
+</div>
+
+
+<div class="mt-5 mb-5">
+  <h3 class="black-color--text mb-3">Meet Our Team</h3>
+  <div class="gridlist">
+
+
+    <div class="item">
+      
+      <img src="gambar/CCEO.jpg">
+
+      <p class="judul">CEO</p>
+      <p class="subjudul">Charlie Frederico</p>
+
+    </div>
+
+    <div class="item">
+      
+      <img src="gambar/CTO.jpg">
+
+      <p class="judul">CTO</p>
+      <p class="subjudul">Henry Laufrans</p>
+
+    </div>
+
+    <div class="item">
+      
+    <img src="gambar/christian.png">
+
+    <p class="judul">Karyawan</p>
+    <p class="subjudul">Christian Alexander</p>
+
+  </div>
+
+  </div>
+</div>
+
+</section>
     <!-- Navigation -->
     <?php include('includes/header.php');?>
     <!-- Page Content -->
@@ -67,6 +117,8 @@ while($row=mysqli_fetch_array($query))
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    
 
   </body>
 
