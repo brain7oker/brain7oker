@@ -30,7 +30,7 @@
 }
 
 .main-3{
-  background-image: url(/web_makanan/gambar/bg3.png);
+  background-image: url('./web_makanan/gambar/bg3.png');
 }
 
 .item:hover {

@@ -129,7 +129,7 @@ background-image: linear-gradient(to bottom left, black,white);
 }
 
 .main-2{
-	background-image: url(/web_makanan/gambar/bg2.png);
+	background-image: url('//web_makanan/gambar/bg2.png');
 }
 
 @media only screen and (max-width: 768px) {
