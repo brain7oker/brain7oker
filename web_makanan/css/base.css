@@ -48,9 +48,11 @@ a {
 }
 .bg-primary{
 	background-color: #01213d;
+	opacity:85%;
 }
 .bg-dark-primary{
-	background-color: #021a30;
+	background-color: #01213d;
+	opacity:85%;
 }
 
 .text-center {
