@@ -16,10 +16,13 @@
   font-size: 30px;
   margin-top: 8px;
   font-weight: bold;
+  text-align: center;
 }
 
 .item > .subjudul {
   margin-top: 4px;
+  text-align: center;
+  font-size:20px;
 }
 
 .text-header{
