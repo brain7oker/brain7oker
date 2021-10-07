@@ -71,9 +71,9 @@ table tr:hover td {
 	background: #f2f2f2;
 }
 #btn_random_makanan {
-background-image: linear-gradient(black,white);
+background-color: #01213d;
   border: none;
-  color: black;
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -81,9 +81,9 @@ background-image: linear-gradient(black,white);
   font-size: 16px;
 }
 #btn_tambah_makanan {
-background-image: linear-gradient(black,white);
+background-color: #01213d;
   border: none;
-  color: black;
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -117,7 +117,7 @@ background-image: linear-gradient(to bottom left, black,white);
 	background-color: white;
 	border: none;
 	color: black;
-	padding: 15px 32px;
+	padding: 15px 111px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
