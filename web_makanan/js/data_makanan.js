@@ -102,11 +102,11 @@ $(document).ready(function(){
     });
 
     function randomNamaMakanan(){
-         //Math.random berfungsi untuk mengambil angka acak antara 0 hingga 1, dan hasil nya selalu di bawah satu dan berntuk desimal
-        // Math.floor berfungsi untuk membulatkan angka kebawah, karena math.randwom menhasilkan decimal, dan indedex array harus integer, maka di butuh kan mth.floor untuk membulat kan nya
-        // listMkanan.length berfungsi untuk menambil jumlah item pada array list makanan
+        // Math.random berfungsi untuk mengambil angka acak antara 0 hingga 1, dan hasil nya selalu di bawah satu dan berntuk desimal
+        // Math.floor berfungsi untuk membulatkan angka kebawah, karena math.randwom menhasilkan decimal, dan index array harus integer, maka di butuh kan math.floor untuk membulat kan nya
+        // listMakanan.length berfungsi untuk menambil jumlah item pada array list makanan
 
-        // listMaknan.length di bawah berguna sebgaiai index masimal pada array listMakanan
+        // listMakanan.length di bawah berguna sebgaiai index maksimal pada array listMakanan
         
         var result = []
         var alreadyDone = [...listMakanan];
