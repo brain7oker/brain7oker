@@ -102,11 +102,11 @@ $(document).ready(function(){
     });
 
     function randomNamaMakanan(){
-        // Math.random berfungsi untuk mengambil angka acak antara 0 hingga 1, dan hasil nya selalu di bawah satu dan berntuk desimal
-        // Math.floor berfungsi untuk membulatkan angka kebawah, karena math.randwom menhasilkan decimal, dan index array harus integer, maka di butuh kan math.floor untuk membulat kan nya
-        // listMakanan.length berfungsi untuk menambil jumlah item pada array list makanan
+         //Math.random berfungsi untuk mengambil angka acak antara 0 hingga 1, dan hasil nya selalu di bawah satu dan berntuk desimal
+        // Math.floor berfungsi untuk membulatkan angka kebawah, karena math.randwom menhasilkan decimal, dan indedex array harus integer, maka di butuh kan mth.floor untuk membulat kan nya
+        // listMkanan.length berfungsi untuk menambil jumlah item pada array list makanan
 
-        // listMakanan.length di bawah berguna sebgaiai index maksimal pada array listMakanan
+        // listMaknan.length di bawah berguna sebgaiai index masimal pada array listMakanan
         
         var result = []
         var alreadyDone = [...listMakanan];
@@ -114,19 +114,25 @@ $(document).ready(function(){
 
         var lengthItem = listMakanan.length > 3 ? 3 : listMakanan.length
 
-        for (var i = 0; i < lengthItem; i++) {
-            console.log(alreadyDone)
-            if(alreadyDone.length > 1){
-                var randomIndex = Math.floor(Math.random() * alreadyDone.length)
+        if(listMakanan.length > 1){
+            for (var i = 0; i < lengthItem; i++) {
+                console.log(alreadyDone)
+                if(alreadyDone.length > 1){
+                    var randomIndex = Math.floor(Math.random() * alreadyDone.length)
 
-                result[i] = alreadyDone[randomIndex].nama_makanan
+                    result[i] = alreadyDone[randomIndex].nama_makanan
 
-                alreadyDone.splice(randomIndex, 1)
+                    alreadyDone.splice(randomIndex, 1)
 
-                // console.log(alreadyDone)
-            } else {
-                result[i] = alreadyDone[0].nama_makanan
+                    // console.log(alreadyDone)
+                } else {
+                    result[i] = alreadyDone[0].nama_makanan
+                }
             }
+        } else if(listMakanan.length === 1) {
+            result[0] = listMakanan[0].nama_makanan
+            result[1] = listMakanan[0].nama_makanan
+            result[2] = listMakanan[0].nama_makanan
         }
 
         // console.log(result)
@@ -172,6 +178,7 @@ $(document).ready(function(){
                 })
             },
             error:function(jqXHR,textStatus,errorThrown){ 
+                console.log(errorThrown)
                 alert("Tidak Dapat Memuat JSON") // ketika gagal mengambil data dari file json
             }
         })
