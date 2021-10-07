@@ -11,25 +11,6 @@ nav {
 	width: 100%;
 }
 
-.nav-list > .active::after{
-    height: 1px;
-    left: 10%;
-    top: 50%;
-    margin-top: 20px;
-    width: 80%;
-    background: #ffffff;
-    content: "";
-    position: absolute;
-}
-
-.nav-list > .active{
-    position: relative;
-}
-
-.nav-list > a{
-}
-
-
 .brand > .logo {
 	height: 65px;
 	padding: 16px 0;
@@ -52,10 +33,10 @@ a {
 	color: #ffffff;
 }
 .bg-primary{
-	background-color: #88AED0;
+	background-color: #01213d;
 }
 .bg-dark-primary{
-	background-color: #556B80;
+	background-color: #021a30;
 }
 
 .text-center {
@@ -91,6 +72,12 @@ a {
 	height: 24px;
 }
 
+.tulisan {
+	font-size: 20px;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -135,9 +122,5 @@ a {
 	    padding-bottom: 16px;
 	    display: inline-block!important;
 	    width: 100%!important;
-	  }
-
-	  .nav-list > .active::after {
-	    left:  0!important;
 	  }
 }

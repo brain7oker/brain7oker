@@ -58,18 +58,6 @@
 	font-size: 50px;
 }
 
-.buffet {
-  width: 100%;
-}
-
-.buffett {
-  width: 100%;
-}
-
-.buffet {
-  width: 100%;
-}
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -90,20 +78,16 @@
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .slideshow-container{
-    height: 80vh;
-  }
-
   .mySlides{
-  	height: 100%;
+  	height: auto;
+    width: 100%;
   }
 
   .mySlides img {
-  	height: 100%;
+  	height: auto;
+    width: 100%;
   	object-fit: cover;
   }
-
-
 
 }
 
