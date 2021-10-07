@@ -11,6 +11,13 @@ nav {
 	width: 100%;
 }
 
+.nav-list > .active{
+    position: relative;
+}
+
+.nav-list > a{
+}
+
 .brand > .logo {
 	height: 65px;
 	padding: 16px 0;
