@@ -11,6 +11,16 @@ nav {
 	width: 100%;
 }
 
+.nav-list > .active::after{
+    height: 1px;
+    left: 10%;
+    top: 50%;
+    margin-top: 20px;
+    width: 80%;
+    content: "";
+    position: absolute;
+}
+
 .nav-list > .active{
     position: relative;
 }
@@ -116,8 +126,6 @@ a {
 	    width: 100%!important;
 	    padding-bottom: 24px;
 	  }
-
-
 
 	  .nav-list{
 	    display: none!important;
