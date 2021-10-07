@@ -12,6 +12,8 @@
 
 
 .item > .judul {
+  color: black;
+  font-size: 30px;
   margin-top: 8px;
   font-weight: bold;
 }
