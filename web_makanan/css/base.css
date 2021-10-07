@@ -138,4 +138,8 @@ a {
 	    display: inline-block!important;
 	    width: 100%!important;
 	  }
+	  
+	  .nav-list > .active::after {
+	    left:  0!important;
+	  }
 }
