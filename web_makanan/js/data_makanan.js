@@ -112,27 +112,20 @@ $(document).ready(function(){
         var alreadyDone = [...listMakanan];
         // console.log(listMakanan)
 
-        var lengthItem = listMakanan.length > 3 ? 3 : listMakanan.length
+        var lengthItem = 3
 
-        if(listMakanan.length > 1){
-            for (var i = 0; i < lengthItem; i++) {
-                console.log(alreadyDone)
-                if(alreadyDone.length > 1){
-                    var randomIndex = Math.floor(Math.random() * alreadyDone.length)
+        for (var i = 0; i < lengthItem; i++) {
+            if(alreadyDone.length > 1){
+                var randomIndex = Math.floor(Math.random() * alreadyDone.length)
 
-                    result[i] = alreadyDone[randomIndex].nama_makanan
+                result[i] = alreadyDone[randomIndex].nama_makanan
 
-                    alreadyDone.splice(randomIndex, 1)
+                alreadyDone.splice(randomIndex, 1)
 
-                    // console.log(alreadyDone)
-                } else {
-                    result[i] = alreadyDone[0].nama_makanan
-                }
+                // console.log(alreadyDone)
+            } else {
+                result[i] = alreadyDone[0].nama_makanan
             }
-        } else if(listMakanan.length === 1) {
-            result[0] = listMakanan[0].nama_makanan
-            result[1] = listMakanan[0].nama_makanan
-            result[2] = listMakanan[0].nama_makanan
         }
 
         // console.log(result)
