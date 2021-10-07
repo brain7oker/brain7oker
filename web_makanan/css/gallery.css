@@ -11,7 +11,7 @@
 .item > p {
   margin-top: 8px;
   margin-bottom: 16px;
-  color: #3a3a3a;
+  color: white;
   font-size: 19px;
   font-weight: 700;
 }
@@ -20,7 +20,7 @@
 .judul_gridlist{
   margin-top: 16px;
   margin-bottom: 32px;
-  color: #3a3a3a;
+  color: white;
   font-size: 22px;
   font-weight: 700;
 }
@@ -29,7 +29,9 @@
 	font-size: 50px;
 }
 
-
+.main-3{
+  background-image: url(/web_makanan/gambar/bg3.png);
+}
 
 @media only screen and (min-width: 768px) {
   /* For mobile phones: */

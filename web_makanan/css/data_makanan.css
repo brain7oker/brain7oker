@@ -128,9 +128,10 @@ background-image: linear-gradient(to bottom left, black,white);
 	font-size: 30px;
 }
 
-.latar {
-
+.main-2{
+	background-image: url(/web_makanan/gambar/bg2.png);
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   section > .flex {
