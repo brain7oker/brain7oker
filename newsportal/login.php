@@ -24,23 +24,10 @@ include('includes/config.php');
 
   <body>
   <link href="log.css" rel="stylesheet">
-  <?php
-        $name; $captcha;
-        if(isset($_POST['name'])) $name = $_POST['name'];
-        if(isset($_POST['g-recaptcha-response'])) $captcha = $_POST['g-recaptcha-response'];
-
-        if(!$captcha){
-            echo "<h2>Please check the captcha form</h2>";
-            return;
-        }
-        
-        $str = "https://www.google.com/recaptcha/api/siteverify?secret=6LeKD10cAAAAALNvwWwEdAVoKhXjkY7WuhB89J5B"."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
-        $response =file_get_contents($str);
-        $response_arr=(array) json_decode($response);
-
-        if($response_arr["success"]==false)
-            echo "<h2>You are spammer ! GET OUT</h2>";
-    ?>
+  
+ <!-- masukkin recaptcha didalem sini
+ disinii
+-->
 <a href="login/index.php"><button class="btn first">As User</button></a>
 
 <a href="admin/index.php"><button class="btn first">As Admin</button></a>

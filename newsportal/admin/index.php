@@ -28,7 +28,10 @@ if(isset($_POST['login'])) {
 }
 
 if(isset($_POST['home'])) {
-    echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
+    if(empty($_POST['home'])){
+        echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
+    }
+    
 }
 ?>
 
@@ -82,13 +85,13 @@ if(isset($_POST['home'])) {
 
                                         <div class="form-group ">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
+                                                <input class="form-control" type="text"  name="username" placeholder="Username or email" autocomplete="off">
                                             </div>
                                         </div>
-
+                                    <!-- masaukkin required="" sebelum placeholder buat empty string -->
                                         <div class="form-group">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="password" name="password" required="" placeholder="Password" autocomplete="off">
+                                                <input class="form-control" type="password" name="password"  placeholder="Password" autocomplete="off">
                                             </div>
                                         </div>
                                         
@@ -137,6 +140,6 @@ if(isset($_POST['home'])) {
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-
+ 
     </body>
 </html>

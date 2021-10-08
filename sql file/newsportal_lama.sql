@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2021 at 04:00 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Nov 25, 2019 at 05:33 PM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -64,12 +65,11 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `Description`, `PostingDate`, `UpdationDate`, `Is_Active`) VALUES
-(2, 'Politik', 'Berita Politik', '2021-10-08 10:28:09', '2021-10-07 18:41:07', 1),
-(3, 'Olahraga', 'Berita Olahraga', '2021-10-08 10:35:09', '2021-10-08 11:11:55', 1),
-(5, 'Kesehatan', 'Berita Kesehatan', '2021-10-08 05:32:58', '2018-06-14 05:33:41', 1),
-(6, 'Otomotif', 'Berita Otomotif', '2021-10-08 15:46:09', '2021-10-08 13:17:14', 1),
-(7, 'Pendidikan', 'Berita Pendidikan', '2021-10-08 15:46:22', '2021-10-08 13:18:23', 1),
-(8, 'Ekonomi', 'Berita Ekonomi', '2021-10-08 15:46:22', '2021-10-08 13:17:52', 1);
+(2, 'Bollywood', 'Bollywood News', '2018-06-06 10:28:09', '2018-06-30 18:41:07', 1),
+(3, 'Sports', 'Related to sports news', '2018-06-06 10:35:09', '2018-06-14 11:11:55', 1),
+(5, 'Entertainment', 'Entertainment related  News', '2018-06-14 05:32:58', '2018-06-14 05:33:41', 1),
+(6, 'Politics', 'Politics', '2018-06-22 15:46:09', '0000-00-00 00:00:00', 1),
+(7, 'Business', 'Business', '2018-06-22 15:46:22', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,7 @@ CREATE TABLE `tblpages` (
 --
 
 INSERT INTO `tblpages` (`id`, `PageName`, `PageTitle`, `Description`, `PostingDate`, `UpdationDate`) VALUES
-(1, 'aboutus', 'About News Portal', '<font color=\"#7b8898\" face=\"Mercury SSm A, Mercury SSm B, Georgia, Times, Times New Roman, Microsoft YaHei New, Microsoft Yahei, å¾®è½¯é›…é»‘, å®‹ä½“, SimSun, STXihei, åŽæ–‡ç»†é»‘, serif\"><span style=\"font-size: 26px;\">\r\n	<section class=\"pa-4\">\r\n\r\n		<div class=\"mt-2 mb-5\">\r\n			<h3 class=\"black-color--text mb-3\">Our Works</h3>\r\n			<p class=\"black-color--text line-height-base\">\r\n				Hai semua, Terima Kasih sudah mengujungi web kita. Kami selaku CEO dan CTO serta karyawan dari Catering Maju Jaya mengucapkan semoga kalian puas dengan website ini dan dapat menggunakannya dengan baik.<br>\r\n				Sedikit Cerita mengenai Catering Maju Jaya. Catering Maju Jaya diciptakan oleh 2 orang yang sekarang menjabat sebagai CEO dan CTO di Catering Maju Jaya. Mereka mengembangkan usaha ini dengan tujuan mendapatkan nilai dari mata kuliah PTI di UNIVERSITAS MULTIMEDIA NUSANTARA.<br>\r\n				Usaha Catering Maju Jaya ini kami harap menjadi usaha yang sangat sukses di Tangerang dan akhirnya melebarkan sayap ke seluruh nusantara dan menjadi catering nomor 1 di Indonesia.\r\n			</p>\r\n		</div>\r\n\r\n\r\n		<div class=\"mt-5 mb-5\">\r\n			<h3 class=\"black-color--text mb-3\">Meet Our Team</h3>\r\n			<div class=\"gridlist\">\r\n\r\n\r\n			  <div class=\"item\">\r\n			  	\r\n			  	<img src=\"gambar/charlie.jpg\" alt=\"Image\" height=\"150\" width=\"150\">\r\n			  	<p class=\"subjudul\">Charlie Frederico</p>\r\n\r\n			  </div>\r\n\r\n			  <div class=\"item\">\r\n			  	\r\n			  	<img src=\"gambar/henry.jpg\" alt=\"Image\" height=\"150\" width=\"150\">\r\n\r\n			  	<p class=\"subjudul\">Henry Laufrans</p>\r\n\r\n			  </div>\r\n\r\n			  <div class=\"item\">\r\n			  	\r\n				<img src=\"gambar/christian.png\" alt=\"Image\" height=\"150\" width=\"150\">\r\n				<p class=\"subjudul\">Christian Alexander</p>\r\n\r\n			</div>\r\n\r\n                                <div class=\"item\">\r\n			  	\r\n			  	<img src=\"gambar/ferdy.jpg\" alt=\"Image\" height=\"150\" width=\"150\">\r\n			  	<p class=\"subjudul\">Ferdy Willy</p>\r\n\r\n			  </div>\r\n\r\n			</div>\r\n		</div>\r\n	</section></span></font><br>', '2018-06-30 18:01:03', '2021-10-05 14:46:40'),
+(1, 'aboutus', 'About News Portal', '<font color=\"#7b8898\" face=\"Mercury SSm A, Mercury SSm B, Georgia, Times, Times New Roman, Microsoft YaHei New, Microsoft Yahei, å¾®è½¯é›…é»‘, å®‹ä½“, SimSun, STXihei, åŽæ–‡ç»†é»‘, serif\"><span style=\"font-size: 26px;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></font><br>', '2018-06-30 18:01:03', '2018-06-30 19:19:51'),
 (2, 'contactus', 'Contact Details', '<p><br></p><p><b>Address :&nbsp; </b>New Delhi India</p><p><b>Phone Number : </b>+91 -01234567890</p><p><b>Email -id : </b>phpgurukulofficial@gmail.com</p>', '2018-06-30 18:01:36', '2018-06-30 19:23:25');
 
 -- --------------------------------------------------------
@@ -177,28 +177,6 @@ INSERT INTO `tblsubcategory` (`SubCategoryId`, `CategoryId`, `Subcategory`, `Sub
 (8, 6, 'International', 'International', '2018-06-30 19:04:43', '0000-00-00 00:00:00', 1),
 (9, 7, 'India', 'India', '2018-06-30 19:08:42', '0000-00-00 00:00:00', 1);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `photo` varchar(255) NOT NULL DEFAULT 'default.svg'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `name`, `photo`) VALUES
-(1, 'chris', 'tes@gmail.com', '$2y$10$Dj8ngvW0V4X2u/FEn4.HjeAGkGyojLiuSYVACNj3AA25Kmr0BdTce', 'admin', 'default.svg');
-
 --
 -- Indexes for dumped tables
 --
@@ -240,13 +218,6 @@ ALTER TABLE `tblsubcategory`
   ADD PRIMARY KEY (`SubCategoryId`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -260,7 +231,7 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tblcomments`
@@ -285,12 +256,6 @@ ALTER TABLE `tblposts`
 --
 ALTER TABLE `tblsubcategory`
   MODIFY `SubCategoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

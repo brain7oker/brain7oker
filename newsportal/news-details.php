@@ -6,28 +6,30 @@ if (empty($_SESSION['token'])) {
  $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
-if(isset($_POST['submit']))
-{
-  //Verifying CSRF Token
-if (!empty($_POST['csrftoken'])) {
-    if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
-$name=$_POST['name'];
-$email=$_POST['email'];
-$comment=$_POST['comment'];
-$postid=intval($_GET['nid']);
-$st1='0';
-$query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
-if($query):
-  echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
-  unset($_SESSION['token']);
-else :
- echo "<script>alert('Something went wrong. Please try again.');</script>";  
+if(isset($_POST['submit'])){
+    //Verifying CSRF Token
+    if( isset( $_SESSION["user"])){
+      if (!empty($_POST['csrftoken'])) {
+        if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
+          $name=$_POST['name'];
+          $email=$_POST['email'];
+          $comment=$_POST['comment'];
+          $postid=intval($_GET['nid']);
+          $st1='0';
+          $query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
+          if($query):
+            echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
+            unset($_SESSION['token']);
+          else :
+          echo "<script>alert('Something went wrong. Please try again.');</script>";  
+          endif;
+        }
+      }
+    }else{
+      Header("Location: login.php");
+    }
+}
 
-endif;
-
-}
-}
-}
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +55,13 @@ endif;
   <body>
 
     <!-- Navigation -->
-   <?php include('includes/header.php');?>
+   <?php 
+    if( isset( $_SESSION["user"])){
+      include('includes/headerin.php');
+    }else{
+      include('includes/header.php');
+    };
+  ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -68,7 +76,7 @@ endif;
           <!-- Blog Post -->
 <?php
 $pid=intval($_GET['nid']);
- $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
+ $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.Penulis as penulis,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
 while ($row=mysqli_fetch_array($query)) {
 ?>
 
@@ -77,7 +85,7 @@ while ($row=mysqli_fetch_array($query)) {
             <div class="card-body">
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
               <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> |
-                <b>Sub Category : </b><?php echo htmlentities($row['subcategory']);?> <b> Posted on </b><?php echo htmlentities($row['postingdate']);?></p>
+                <b>Penulis : </b><?php echo htmlentities($row['penulis']);?> <b> Posted on </b><?php echo htmlentities($row['postingdate']);?></p>
                 <hr />
 
  <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">

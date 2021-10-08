@@ -1,5 +1,6 @@
 <?php
 include('includes/config.php');
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,13 @@ include('includes/config.php');
   <body>
 
     <!-- Navigation -->
-    <?php include('includes/header.php');?>
+    <?php 
+    if( isset( $_SESSION["user"])){
+      include('includes/headerin.php');
+    }else{
+      include('includes/header.php');
+    }
+    ?>
     <!-- Page Content -->
     <div class="container">
 
