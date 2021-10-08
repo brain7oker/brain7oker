@@ -152,7 +152,7 @@ while($row=mysqli_fetch_array($query))
 if($st=='0'):
 echo "Wating for approval";
 else:
-echo "Approved";
+echo "Pending";
 endif;
 ?></td>
 

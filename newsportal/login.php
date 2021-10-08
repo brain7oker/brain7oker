@@ -1,6 +1,10 @@
 <?php
+session_start();
 include('includes/config.php');
-
+if(isset($_SESSION['logindulu'])){
+  echo "<script>alert('Silahkan Login as User jika mau komen ya!');</script>";
+  session_destroy();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

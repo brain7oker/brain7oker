@@ -10,22 +10,27 @@ if(isset($_POST['submit'])){
     //Verifying CSRF Token
     if( isset( $_SESSION["user"])){
       if (!empty($_POST['csrftoken'])) {
+        if (empty($_SESSION['token'])) {
+          $_SESSION['token'] = bin2hex(random_bytes(32));
+         }
         if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
           $name=$_POST['name'];
           $email=$_POST['email'];
           $comment=$_POST['comment'];
           $postid=intval($_GET['nid']);
-          $st1='0';
+          $st1='1';
           $query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
           if($query):
             echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
-            unset($_SESSION['token']);
+            //unset($_SESSION['token']);
           else :
           echo "<script>alert('Something went wrong. Please try again.');</script>";  
           endif;
         }
       }
     }else{
+      echo "<script>alert('Silahkan Login as User jika mau komen ya!');</script>";
+      $_SESSION['logindulu'] = 1;
       Header("Location: login.php");
     }
 }
@@ -115,29 +120,28 @@ $pt=$row['postdetails'];
       <!-- /.row -->
 <!---Comment Section --->
 
- <div class="row" style="margin-top: -8%">
-   <div class="col-md-8">
-<div class="card my-4">
-            <h5 class="card-header">Leave a Comment:</h5>
-            <div class="card-body">
-              <form name="Comment" method="post">
+  <div class="row" style="margin-top: -8%">
+    <div class="col-md-8">
+      <div class="card my-4">
+      <h5 class="card-header">Leave a Comment:</h5>
+      <div class="card-body">
+      <form name="Comment" method="post">
       <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
- <div class="form-group">
-<input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
-</div>
+      <div class="form-group">
+      <input type="text" name="name" class="form-control" placeholder="Enter your fullname" required>
+      </div>
 
- <div class="form-group">
- <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
- </div>
+      <div class="form-group">
+      <input type="email" name="email" class="form-control" placeholder="Enter your Valid email" required>
+    </div>
 
-
-                <div class="form-group">
-                  <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-              </form>
-            </div>
-          </div>
+    <div class="form-group">
+      <textarea class="form-control" name="comment" rows="3" placeholder="Comment" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+    </div>
+  </div>
 
   <!---Comment Display Section --->
 
