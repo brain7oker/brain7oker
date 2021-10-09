@@ -342,6 +342,7 @@ File: Components
 }
 .btn-bordered.btn-danger {
   border-bottom: 2px solid #f2404e !important;
+  margin-top: 9%;
 }
 .btn-bordered.btn-inverse {
   border-bottom: 2px solid #0d0d0f !important;
