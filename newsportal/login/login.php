@@ -26,7 +26,7 @@ if(isset($_POST['login'])){
         if(password_verify($password, $user["password"])){
             // buat Session
             session_start();
-            $_SESSION["user"] = $user;
+            $_SESSION['user'] = $username;
             // login sukses, alihkan ke halaman timeline
             header("Location: ../index.php");
         }
@@ -60,16 +60,16 @@ if(isset($_POST['login'])){
 
             <div class="form-group">
                 <label for="username">Username</label>
-                <input class="form-control" type="text" name="username" placeholder="Username atau email" />
+                <input class="form-control" type="text" name="username" placeholder="Username atau email" required/>
             </div>
 
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="Password" />
+                <input class="form-control" type="password" name="password" placeholder="Password" required/>
             </div>
 
-            <input type="submit" class="btn btn-success btn-block" name="login" value="Masuk" />
+            <input type="submit" class="btn btn-success btn-block" name="login" value="Masuk" required/>
 
         </form>
             

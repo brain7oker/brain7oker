@@ -11,3 +11,12 @@ How to run NewsPortal Project
 credential for admin panel :
 username / email : admin/ phpgurukuloficial@gmail.com (use any one) 
 Password : Test @12345
+
+koneksi config user
+try {    
+    //create PDO connection 
+    $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+} catch(PDOException $e) {
+    //show error
+    die("Terjadi masalah: " . $e->getMessage());
+}

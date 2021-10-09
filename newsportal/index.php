@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$user = $_SESSION["user"];
 include('includes/config.php');
 
     ?>
@@ -25,7 +26,6 @@ include('includes/config.php');
   </head>
 
   <body>
-
     <!-- Navigation -->
    <?php 
    if( isset( $_SESSION["user"])){
@@ -67,11 +67,14 @@ while ($row=mysqli_fetch_array($query)) {
 ?>
 
           <div class="card mb-4">
- <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
-            <div class="card-body">
+          <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>">
+          <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
+          
+          <div class="card-body">
+            
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
                  <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> </p>
-       
+                 </a>
               <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="btn btn-primary">Read More &rarr;</a>
             </div>
             <div class="card-footer text-muted">

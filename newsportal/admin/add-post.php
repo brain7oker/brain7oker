@@ -26,7 +26,7 @@ $allowed_extensions = array(".jpg","jpeg",".png",".gif");
 // Validation for allowed extensions .in_array() function searches an array for a specific value.
 if(!in_array($extension,$allowed_extensions))
 {
-echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
 }
 else
 {

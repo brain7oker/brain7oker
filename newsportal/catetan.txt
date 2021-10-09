@@ -29,3 +29,23 @@ kategori berita :
 4. ekonomi
 5. otomotif
 6. pendidikan
+
+masukin di register user
+$sql = "INSERT INTO users (name, username, email, password) 
+            VALUES (:name, :username, :email, :password)";
+    $stmt = $db->prepare($sql);
+
+    // bind parameter ke query
+    $params = array(
+        ":name" => $name,
+        ":username" => $username,
+        ":password" => $password,
+        ":email" => $email
+    );
+
+    // eksekusi query untuk menyimpan ke database
+    $saved = $stmt->execute($params);
+
+    // jika query simpan berhasil, maka user sudah terdaftar
+    // maka alihkan ke halaman login
+    if($saved) header("Location: login.php");

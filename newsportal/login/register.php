@@ -5,24 +5,45 @@ require_once("config.php");
 if(isset($_POST['register'])){
 
     // filter data yang diinputkan
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
+    $bname = filter_input(INPUT_POST, 'bname', FILTER_SANITIZE_STRING);
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     // enkripsi password
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-
-
-    // menyiapkan query
-    $sql = "INSERT INTO users (name, username, email, password) 
-            VALUES (:name, :username, :email, :password)";
+    $gender = $_POST["gender"];
+    $ttl = $_POST["ttl"];
+    $imgfile = $_FILES["userimg"]["name"];
+    // get the image extension
+    $extension = substr($imgfile,strlen($imgfile)-4,strlen($imgfile));
+    // allowed extensions
+    $allowed_extensions = array(".jpg","jpeg",".png",".gif");
+    // Validation for allowed extensions .in_array() function searches an array for a specific value.
+    if(!in_array($extension,$allowed_extensions))
+    {
+    echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    }
+    else
+    {
+    //rename the image file
+    $foto=md5($imgfile).$extension;
+    // Code for move image into directory
+    move_uploaded_file($_FILES["userimg"]["tmp_name"],"userimg/".$foto);
+    
+    $sql = "INSERT INTO users (fname, bname, username, email, password, ttl, gender, photo) 
+    VALUES (:fname, :bname, :username, :email, :password, :ttl, :gender, :tmp_name)";
     $stmt = $db->prepare($sql);
 
     // bind parameter ke query
     $params = array(
-        ":name" => $name,
-        ":username" => $username,
-        ":password" => $password,
-        ":email" => $email
+    ":fname" => $fname,
+    ":bname" => $bname,
+    ":username" => $username,
+    ":password" => $password,
+    ":email" => $email,
+    ":ttl" => $ttl,
+    ":gender" => $gender,
+    ":tmp_name" => $foto
     );
 
     // eksekusi query untuk menyimpan ke database
@@ -31,6 +52,7 @@ if(isset($_POST['register'])){
     // jika query simpan berhasil, maka user sudah terdaftar
     // maka alihkan ke halaman login
     if($saved) header("Location: login.php");
+    }
 }
 
 ?>
@@ -56,30 +78,58 @@ if(isset($_POST['register'])){
         <h4>Bergabunglah bersama ribuan orang lainnya...</h4>
         <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
 
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
 
             <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
+                <label for="name">Nama Depan</label>
+                <input class="form-control" type="text" name="fname" placeholder="Masukkan nama depanmu.." required/>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nama Belakang</label>
+                <input class="form-control" type="text" name="bname" placeholder="Masukkan nama belakangmu.." required />
             </div>
 
             <div class="form-group">
                 <label for="username">Username</label>
-                <input class="form-control" type="text" name="username" placeholder="Username" />
+                <input class="form-control" type="text" name="username" placeholder="Username" required />
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" placeholder="Alamat Email" />
+                <input class="form-control" type="email" name="email" placeholder="Alamat Email" required />
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="Password" />
+                <input class="form-control" type="password" name="password" placeholder="Password" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="ttl">Tanggal Lahir</label>
+                <input class="form-control" type="date" name="ttl" required />
+            </div>
+
+            <div class="form-group">
+                <label for="ttl">Jenis Kelamin</label>
+                <ol>
+                    <li>
+                        <input type="radio" name="gender" value="1" />Laki-Laki
+                    </li>
+                    <li>
+                        <input type="radio" name="gender" value="2" />Perempuan
+                    </li>
+                </ol>
+            </div>
+
+            <div class="card-box">
+                <h4 class="m-b-30 m-t-0 header-title"><b>Foto Profil</b></h4>
+                <input type="file" class="form-control" id="userimg" name="userimg" ></br>
             </div>
 
             <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
 
+            
         </form>
             
         </div>

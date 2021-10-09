@@ -1,6 +1,8 @@
 <?php 
 session_start();
 include('includes/config.php');
+
+$user = $_SESSION["user"];
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
  $_SESSION['token'] = bin2hex(random_bytes(32));
@@ -21,7 +23,7 @@ if(isset($_POST['submit'])){
           $st1='1';
           $query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
           if($query):
-            echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
+            echo "<script>alert('comment successfully uploaded!');</script>";
             //unset($_SESSION['token']);
           else :
           echo "<script>alert('Something went wrong. Please try again.');</script>";  
@@ -80,13 +82,13 @@ if(isset($_POST['submit'])){
 
           <!-- Blog Post -->
 <?php
-$pid=intval($_GET['nid']);
- $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.Penulis as penulis,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
-while ($row=mysqli_fetch_array($query)) {
+  $pid=intval($_GET['nid']);
+  $query=mysqli_query($con," select tblposts.PostTitle as posttitle,tblposts.Penulis as penulis,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
+  //$foto=mysqli_query($con,"select users.photo as foto where users.username='$user'");
+  while ($row=mysqli_fetch_array($query)) {
 ?>
-
+          
           <div class="card mb-4">
-      
             <div class="card-body">
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
               <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> |
@@ -147,11 +149,11 @@ $pt=$row['postdetails'];
 
  <?php 
  $sts=1;
- $query=mysqli_query($con,"select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
+ $query=mysqli_query($con,"select name,comment,postingDate from tblcomments where postId='$pid' and status='$sts'");
 while ($row=mysqli_fetch_array($query)) {
 ?>
 <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="images/usericon.png" alt="">
+            <img class="d-flex mr-3 rounded-circle" src="login/userimg/<?php echo htmlentities($row['foto']);?>">
             <div class="media-body">
               <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
                   <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
