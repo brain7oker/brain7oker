@@ -50,7 +50,7 @@ if(isset($_POST['register'])){
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/register.css" />
 </head>
-<body id="bg-light">
+<body>
 
 <div id="container">
     <div class="row">
@@ -115,10 +115,6 @@ if(isset($_POST['register'])){
             
         </form>
             
-        </div>
-
-        <div class="col-md-6">
-            <img class="img img-responsive" src="img/connect.png" />
         </div>
 
     </div>
