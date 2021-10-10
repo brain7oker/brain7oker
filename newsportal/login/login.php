@@ -6,15 +6,18 @@ if(isset($_POST['login'])){
 
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
-    $sql = "SELECT * FROM users WHERE username=:username OR email=:email";
+    $photo = NULL;
+    $sql = "SELECT * FROM users WHERE username=:username OR email=:email OR username=:username";
+    $sqli ="SELECT photo from users where username=:username";
     $stmt = $db->prepare($sql);
     
     // bind parameter ke query
     $params = array(
         ":username" => $username,
-        ":email" => $username
+        ":email" => $username,
+        ":photo" => $photo
     );
+
 
     $stmt->execute($params);
 
@@ -27,6 +30,7 @@ if(isset($_POST['login'])){
             // buat Session
             session_start();
             $_SESSION['user'] = $username;
+            $_SESSION['photo'] = $photo;
             // login sukses, alihkan ke halaman timeline
             header("Location: ../index.php");
         }
@@ -56,7 +60,7 @@ if(isset($_POST['login'])){
         <h4>Masuk ke Pesbuk</h4>
         <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
 
-        <form action="" method="POST">
+        <form action="" method="POST" >
 
             <div class="form-group">
                 <label for="username">Username</label>

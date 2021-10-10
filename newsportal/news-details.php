@@ -2,7 +2,6 @@
 session_start();
 include('includes/config.php');
 
-$user = $_SESSION["user"];
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
  $_SESSION['token'] = bin2hex(random_bytes(32));
@@ -84,7 +83,6 @@ if(isset($_POST['submit'])){
 <?php
   $pid=intval($_GET['nid']);
   $query=mysqli_query($con," select tblposts.PostTitle as posttitle,tblposts.Penulis as penulis,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
-  //$foto=mysqli_query($con,"select users.photo as foto where users.username='$user'");
   while ($row=mysqli_fetch_array($query)) {
 ?>
           
@@ -108,11 +106,6 @@ $pt=$row['postdetails'];
             </div>
           </div>
 <?php } ?>
-       
-
-      
-
-     
 
         </div>
 
@@ -153,7 +146,7 @@ $pt=$row['postdetails'];
 while ($row=mysqli_fetch_array($query)) {
 ?>
 <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="login/userimg/<?php echo htmlentities($row['foto']);?>">
+            <img class="d-flex mr-3 rounded-circle" src="images/usericon.png";?>">
             <div class="media-body">
               <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
                   <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
