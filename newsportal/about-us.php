@@ -16,7 +16,7 @@ session_start();
     <title>News Portal | About us</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
@@ -24,7 +24,11 @@ session_start();
   </head>
 
   <body>
-
+    <style>
+      body {
+        background-image: url('images/bg1.png');
+      }
+    </style>
     <!-- Navigation -->
     <?php 
     if( isset( $_SESSION["user"])){

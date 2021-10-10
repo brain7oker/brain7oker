@@ -4,15 +4,14 @@
           <div class="card mb-4">
             <h5 class="card-header">Search</h5>
             <div class="card-body">
-                   <form name="search" action="search.php" method="post">
-              <div class="input-group">
-           
-        <input type="text" name="searchtitle" class="form-control" placeholder="Search for..." required>
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="submit">Go!</button>
-                </span>
-              </form>
-              </div>
+              <form name="search" action="search.php" method="post">
+                <div class="input-group">
+                  <input type="text" name="searchtitle" class="form-control" placeholder="Search for..." required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-secondary" type="submit">Go!</button>
+                  </span>
+                </div>
+              </form> 
             </div>
           </div>
 
@@ -29,7 +28,7 @@ while($row=mysqli_fetch_array($query))
 ?>
 
                     <li>
-                      <a href="category.php?catid=<?php echo htmlentities($row['id'])?>"><?php echo htmlentities($row['CategoryName']);?></a>
+                      <a class="mb-0" href="category.php?catid=<?php echo htmlentities($row['id'])?>"><?php echo htmlentities($row['CategoryName']);?></a>
                     </li>
 <?php } ?>
                   </ul>
@@ -51,7 +50,7 @@ while ($row=mysqli_fetch_array($query)) {
 ?>
 
   <li>
-                      <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                      <a class="mb-0" href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
                     </li>
             <?php } ?>
           </ul>

@@ -17,13 +17,18 @@ include('includes/config.php');
     <title>News Portal | Home Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
   </head>
 
   <body>
+    <style>
+    body {
+      background-image: url('images/bg1.png');
+    }
+    </style>
     <!-- Navigation -->
    <?php 
    if( isset( $_SESSION["user"])){
@@ -66,13 +71,12 @@ while ($row=mysqli_fetch_array($query)) {
 
           <div class="card mb-4">
           <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>">
-          <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
+          <img class="card-img-top" style="object-fit: cover;" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
           
           <div class="card-body">
             
-              <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
-                 <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> </p>
-                 </a>
+              <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2></a>
+                 <p><b class="card-title">Category : </b> <a class="mb-0" href="category.php?catid=<?php echo htmlentities($row['cid'])?>"><?php echo htmlentities($row['category']);?></a> </p>
               <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="btn btn-primary">Read More &rarr;</a>
             </div>
             <div class="card-footer text-muted">
