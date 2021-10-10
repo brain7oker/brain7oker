@@ -9,7 +9,7 @@ if(isset($_POST['login'])) {
     $password=$_POST['password'];
     // Fetch data from database on the basis of username/email and password
     $sql =mysqli_query($con,"SELECT AdminUserName,AdminEmailId,AdminPassword FROM tbladmin WHERE (AdminUserName='$uname' || AdminEmailId='$uname')");
-    $num=mysqli_fetch_array($sql);
+    $num = mysqli_fetch_array($sql);
     if($num>0){
         $hashpassword=$num['AdminPassword']; // Hashed password fething from database
         //verifying Password
@@ -23,8 +23,7 @@ if(isset($_POST['login'])) {
     //if username or email not found in database
     else{
     echo "<script>alert('User not registered with us');</script>";
-    }
-    
+    } 
 }
 
 if(isset($_POST['home'])) {
