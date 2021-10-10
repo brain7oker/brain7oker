@@ -57,9 +57,7 @@ if(isset($_POST['submit'])){
     <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
-
   <body>
-
     <!-- Navigation -->
    <?php 
     if( isset( $_SESSION["user"])){
@@ -71,14 +69,9 @@ if(isset($_POST['submit'])){
 
     <!-- Page Content -->
     <div class="container">
-
-
-     
       <div class="row" style="margin-top: 4%">
-
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-
           <!-- Blog Post -->
 <?php
   $pid=intval($_GET['nid']);
@@ -105,7 +98,6 @@ if(isset($_POST['submit'])){
 <?php } ?>
 
         </div>
-
         <!-- Sidebar Widgets Column -->
       <?php include('includes/sidebar.php');?>
       </div>
