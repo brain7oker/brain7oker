@@ -52,7 +52,7 @@ if(isset($_POST['register'])){
 </head>
 <body id="bg-light">
 
-<div class="container mt-5">
+<div id="container">
     <div class="row">
         <div class="col-md-6">
 
