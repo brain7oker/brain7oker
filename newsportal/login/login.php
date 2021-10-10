@@ -6,16 +6,13 @@ if(isset($_POST['login'])){
 
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-    $photo = NULL;
     $sql = "SELECT * FROM users WHERE username=:username OR email=:email OR username=:username";
-    $sqli ="SELECT photo from users where username=:username";
     $stmt = $db->prepare($sql);
     
     // bind parameter ke query
     $params = array(
         ":username" => $username,
         ":email" => $username,
-        ":photo" => $photo
     );
 
 
