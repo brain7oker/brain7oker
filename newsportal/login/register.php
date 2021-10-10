@@ -1,6 +1,6 @@
 <?php
 
-require_once("config.php");
+include('../includes/config.php');
 
 if(isset($_POST['register'])){
 
@@ -32,7 +32,7 @@ if(isset($_POST['register'])){
     
     $sql = "INSERT INTO users (fname, bname, username, email, password, ttl, gender, photo) 
     VALUES (:fname, :bname, :username, :email, :password, :ttl, :gender, :tmp_name)";
-    $stmt = $db->prepare($sql);
+    $stmt = $con->prepare($sql);
 
     // bind parameter ke query
     $params = array(
