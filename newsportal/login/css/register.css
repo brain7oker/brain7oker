@@ -30,3 +30,26 @@ body {
     border-radius: 5px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
   }
+  form #user-details #input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  #user-details #input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  form #user-details #input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  #user-details .input-box input:focus,
+  #user-details .input-box input:valid{
+  border-color: #9b59b6;
+}

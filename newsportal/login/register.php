@@ -53,68 +53,67 @@ if(isset($_POST['register'])){
 <body>
 
 <div id="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="title">
+        <div class="content">
 
         <p>&larr; <a href="index.php">Home</a>
 
         <h4>Bergabunglah bersama ribuan orang lainnya...</h4>
         <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
-
         <form action="" method="POST" enctype="multipart/form-data">
+            <div id="user-details">
+                <div id="input-box">
+                    <label for="name">Nama Depan</label>
+                    <input class="form-control" type="text" name="fname" placeholder="Masukkan nama depanmu.." required/>
+                </div>
 
-            <div class="form-group">
-                <label for="name">Nama Depan</label>
-                <input class="form-control" type="text" name="fname" placeholder="Masukkan nama depanmu.." required/>
-            </div>
+                <div id="input-box">
+                    <label for="name">Nama Belakang</label>
+                    <input class="form-control" type="text" name="bname" placeholder="Masukkan nama belakangmu.." required />
+                </div>
 
-            <div class="form-group">
-                <label for="name">Nama Belakang</label>
-                <input class="form-control" type="text" name="bname" placeholder="Masukkan nama belakangmu.." required />
-            </div>
+                <div id="input-box">
+                    <label for="username">Username</label>
+                    <input class="form-control" type="text" name="username" placeholder="Username" required />
+                </div>
 
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input class="form-control" type="text" name="username" placeholder="Username" required />
-            </div>
+                <div id="input-box">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" name="email" placeholder="Alamat Email" required />
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" placeholder="Alamat Email" required />
-            </div>
+                <div id="input-box">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" name="password" placeholder="Password" required />
+                </div>
+                
+                <div id="input-box">
+                    <label for="ttl">Tanggal Lahir</label>
+                    <input class="form-control" type="date" name="ttl" required />
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="Password" required />
-            </div>
-            
-            <div class="form-group">
-                <label for="ttl">Tanggal Lahir</label>
-                <input class="form-control" type="date" name="ttl" required />
-            </div>
+                <div id="gender-details">
+                    <label for="ttl">Jenis Kelamin</label>
+                    <ol>
+                        <li>
+                            <input type="radio" name="gender" value="1" />Laki-Laki
+                        </li>
+                        <li>
+                            <input type="radio" name="gender" value="2" />Perempuan
+                        </li>
+                    </ol>
+                </div>
 
-            <div class="form-group">
-                <label for="ttl">Jenis Kelamin</label>
-                <ol>
-                    <li>
-                        <input type="radio" name="gender" value="1" />Laki-Laki
-                    </li>
-                    <li>
-                        <input type="radio" name="gender" value="2" />Perempuan
-                    </li>
-                </ol>
-            </div>
+                <div class="card-box">
+                    <h4 class="m-b-30 m-t-0 header-title"><b>Foto Profil</b></h4>
+                    <input type="file" class="form-control" id="userimg" name="userimg" ></br>
+                </div>
 
-            <div class="card-box">
-                <h4 class="m-b-30 m-t-0 header-title"><b>Foto Profil</b></h4>
-                <input type="file" class="form-control" id="userimg" name="userimg" ></br>
-            </div>
+                <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
 
-            <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
-
-            
+            </div>   
         </form>
-            
+             
         </div>
 
     </div>
