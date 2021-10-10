@@ -1,3 +1,15 @@
 pw : _@+4$G&UH#(@s%eD
 name : kuynews / id17644678_kuynews
 username :hostkuy / id17644678_hostkuy
+
+
+web password for kuynews
+kuynews
+pemwebccfh
+
+database name id17741294_kuynews
+database username id17741294_ccfh
+database password GuOF@&j-^HPT%l2K
+
+site key recaptcha 6Le0dMAcAAAAADP-OcXjnad2rdx7AAxx1xkSSvnB
+secret key recaptcha 6Le0dMAcAAAAAIb5rXWgqo2jl6RkcqJRK3DIOnBg
