@@ -15,12 +15,12 @@ body {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   }
-  #container .title{
+  #container #title{
     font-size: 25px;
     font-weight: 500;
     position: relative;
   }
-  #container .title::before{
+  #container #title::before{
     content: "";
     position: absolute;
     left: 0;
@@ -49,7 +49,7 @@ body {
     margin-bottom: 15px;
     width: 100%;
   }
-  #user-details .input-box input:focus,
-  #user-details .input-box input:valid{
+  #user-details #input-box input:focus,
+  #user-details #input-box input:valid{
   border-color: #9b59b6;
 }
