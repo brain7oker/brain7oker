@@ -84,8 +84,7 @@ if(isset($_POST['submit'])){
   $pid=intval($_GET['nid']);
   $query=mysqli_query($con," select tblposts.PostTitle as posttitle,tblposts.Penulis as penulis,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
   while ($row=mysqli_fetch_array($query)) {
-?>
-          
+?>      
           <div class="card mb-4">
             <div class="card-body">
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']);?></h2>
@@ -96,13 +95,11 @@ if(isset($_POST['submit'])){
  <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
   
               <p class="card-text"><?php 
-$pt=$row['postdetails'];
-              echo  (substr($pt,0));?></p>
+                $pt=$row['postdetails'];
+                echo  (substr($pt,0));?></p>
              
             </div>
-            <div class="card-footer text-muted">
-             
-           
+            <div class="card-footer text-muted">         
             </div>
           </div>
 <?php } ?>
@@ -149,25 +146,19 @@ while ($row=mysqli_fetch_array($query)) {
             <img class="d-flex mr-3 rounded-circle" src="images/usericon.png";?>">
             <div class="media-body">
               <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
-                  <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
-            </h5>
+                <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
+              </h5>
            
              <?php echo htmlentities($row['comment']);?>            </div>
-          </div>
+            </div>
 <?php } ?>
-
         </div>
       </div>
-    </div>
-
-  
-      <?php include('includes/footer.php');?>
-
-
+</div>
+    <?php include('includes/footer.php');?>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
-
 </html>
