@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Newsportal</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
 
-     <link rel="stylesheet" href="css/bootstrap.min.css" />
-</head>
-<body class="bg-light">
-    <header>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">Newsportal</h1>
-                        <p>Bergabunglah bersama jutaan orang lainnya...</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="login.php" class="btn btn-secondary">Masuk</a>
-                        <a href="register.php" class="btn btn-success">Daftar</a><br><br>
-                        <a href="../index.php" class="btn btn-third">Home</a>
-                    </div>
+        <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css%22"/>
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="wrapper">
+                <div class="title"><span>Welcome to User Menu!</span></div>
+                <div class="row button">
+                    <a href="login.php">Login</a>
+                    <a href="register.php">Register</a>
+                    <a href="../index.php">Home</a>
                 </div>
             </div>
         </div>
-    </header>
-
-    <section>
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img class="img img-responsive" src="img/connect.png" />
-                    </div>
-                </div>
-            </div>
-    </section>
-
-</body>
+    </div>
+    </body>
 </html>

@@ -51,13 +51,18 @@ if(isset($_POST['submit'])){
     <title>News Portal | Home Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
   <body>
+  <style>
+    body {
+      background-image: url('images/bg1.png');
+    }
+  </style>
     <!-- Navigation -->
    <?php 
     if( isset( $_SESSION["user"])){
@@ -136,8 +141,8 @@ while ($row=mysqli_fetch_array($query)) {
 ?>
 <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="images/usericon.png";?>">
-            <div class="media-body">
-              <h5 class="mt-0"><?php echo htmlentities($row['name']);?> <br />
+            <div class="media-body mt-0">
+              <h5><?php echo htmlentities($row['name']);?> <br />
                 <span style="font-size:11px;"><b>at</b> <?php echo htmlentities($row['postingDate']);?></span>
               </h5>
            

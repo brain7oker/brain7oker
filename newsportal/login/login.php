@@ -36,41 +36,39 @@ echo "<script>alert('User not registered with us');</script>";
     <title>Login</title>
 
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
+<div class="container">
+    <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+            <form action="" method="POST" >
 
-        <p>&larr; <a href="index.php">Home</a>
+                <div class="row">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username atau email" required/>
+                </div>
 
-        <h4>Masuk ke Pesbuk</h4>
-        <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
+                <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required/>
+                </div>
 
-        <form action="" method="POST" >
+                <div class="row button">
+                    <input type="submit" name="login" value="Masuk" required/></br>
+                </div>
 
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input class="form-control" type="text" name="username" placeholder="Username atau email" required/>
-            </div>
+                <div class="row">
+                    <a href="../index.php">Home</a>
+                </div>
 
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="Password" required/>
-            </div>
-
-            <input type="submit" class="btn btn-success btn-block" name="login" value="Masuk" required/>
-
-        </form>
-            
+            </form>
         </div>
-
-        <div class="col-md-6">
-            <!-- isi dengan sesuatu di sini -->
+        <div class="signup-link">
+            Not a member? 
+            <a href="register.php">Signup now</a>
         </div>
-
     </div>
 </div>
     

@@ -7395,6 +7395,7 @@ button.bg-dark:focus {
 .mt-0,
 .my-0 {
   margin-top: 0 !important;
+  color:white;
 }
 
 .mr-0,
