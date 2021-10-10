@@ -35,31 +35,6 @@ if(isset($_POST['register'])){
             $error="Something went wrong . Please try again.";    
         } 
     }
-    
-    /*$sql = "INSERT INTO users (fname, bname, username, email, password, ttl, gender, photo) 
-    VALUES (:fname, :bname, :username, :email, :password, :ttl, :gender, :tmp_name)";
-    $stmt = $con->prepare($sql);
-
-    // bind parameter ke query
-    $params = array(
-    ":fname" => $fname,
-    ":bname" => $bname,
-    ":username" => $username,
-    ":password" => $password,
-    ":email" => $email,
-    ":ttl" => $ttl,
-    ":gender" => $gender,
-    ":tmp_name" => $foto
-    );
-
-    // eksekusi query untuk menyimpan ke database
-    $saved = $stmt->execute($params);
-
-    // jika query simpan berhasil, maka user sudah terdaftar
-    // maka alihkan ke halaman login
-    if($saved) header("Location: login.php");
-    }
-    */
 }
 
 ?>

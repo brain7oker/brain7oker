@@ -30,7 +30,7 @@ include('includes/config.php');
     </style>
     <!-- Navigation -->
    <?php 
-   if( isset( $_SESSION["user"])){
+   if( isset( $_SESSION['user'])){
      include('includes/headerin.php');
    }else{
      include('includes/header.php');
