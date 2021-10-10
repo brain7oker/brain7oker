@@ -19,18 +19,24 @@ if(isset($_POST['register'])){
     // allowed extensions
     $allowed_extensions = array(".jpg","jpeg",".png",".gif");
     // Validation for allowed extensions .in_array() function searches an array for a specific value.
-    if(!in_array($extension,$allowed_extensions))
-    {
-    echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    if(!in_array($extension,$allowed_extensions)){
+        echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    }else{
+        //rename the image file
+        $foto=md5($imgfile).$extension;
+        // Code for move image into directory
+        move_uploaded_file($_FILES["userimg"]["tmp_name"],"userimg/".$foto);
+        
+        $query=mysqli_query($con,"insert into users(fname, bname, username, email, password, ttl, gender, photo) values('$fname','$bname','$username','$email','$password','$ttl','$gender','$foto')");
+        if($query){
+            echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
+        }
+        else{
+            $error="Something went wrong . Please try again.";    
+        } 
     }
-    else
-    {
-    //rename the image file
-    $foto=md5($imgfile).$extension;
-    // Code for move image into directory
-    move_uploaded_file($_FILES["userimg"]["tmp_name"],"userimg/".$foto);
     
-    $sql = "INSERT INTO users (fname, bname, username, email, password, ttl, gender, photo) 
+    /*$sql = "INSERT INTO users (fname, bname, username, email, password, ttl, gender, photo) 
     VALUES (:fname, :bname, :username, :email, :password, :ttl, :gender, :tmp_name)";
     $stmt = $con->prepare($sql);
 
@@ -53,6 +59,7 @@ if(isset($_POST['register'])){
     // maka alihkan ke halaman login
     if($saved) header("Location: login.php");
     }
+    */
 }
 
 ?>
