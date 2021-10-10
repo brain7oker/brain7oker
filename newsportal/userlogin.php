@@ -53,7 +53,7 @@ if( isset($_POST["register"]) ){
             <button type="submit" name="register">Register</button> 
         </li>
         
-    </ul
+    </ul>
 </form>
 </body>
 
