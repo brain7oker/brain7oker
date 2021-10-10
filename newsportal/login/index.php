@@ -11,16 +11,24 @@
     </head>
 
     <body>
-    <div class="container">
-        <div class="wrapper">
+        <div class="container">
+            <div class="wrapper">
                 <div class="title"><span>Welcome to User Menu!</span></div>
-                <div class="row button">
-                    <a href="login.php">Login</a>
-                    <a href="register.php">Register</a>
-                    <a href="../index.php">Home</a>
+                    <form action="" method="POST" >
+                        <div class="row">
+                            <a href="login.php">Login</a></br>
+                        </div>
+
+                        <div class="row button">
+                        <a href="register.php">Register</a></br>
+                        </div>
+
+                        <div class="row">
+                            <a href="../index.php">Home</a></br>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
     </body>
 </html>

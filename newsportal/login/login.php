@@ -62,13 +62,14 @@ echo "<script>alert('User not registered with us');</script>";
                 <div class="row">
                     <a href="../index.php">Home</a>
                 </div>
-
+                
+                <div class="signup-link">
+                    Not a member? 
+                    <a href="register.php">Signup now</a>
+                </div>
             </form>
         </div>
-        <div class="signup-link">
-            Not a member? 
-            <a href="register.php">Signup now</a>
-        </div>
+        
     </div>
 </div>
     
