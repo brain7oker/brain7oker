@@ -48,8 +48,9 @@ if(isset($_POST['register'])){
     <title>Register Pesbuk</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/register.css" />
 </head>
-<body class="bg-light">
+<body id="bg-light">
 
 <div class="container mt-5">
     <div class="row">
