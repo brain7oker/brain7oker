@@ -44,9 +44,7 @@ while($row=mysqli_fetch_array($query))
 
 ?>
       <h1 class="mt-4 mb-3"><?php echo htmlentities($row['PageTitle'])?>
-  
       </h1>
-
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.php">Home</a>
@@ -56,9 +54,7 @@ while($row=mysqli_fetch_array($query))
 
       <!-- Intro Content -->
       <div class="row">
-
         <div class="col-lg-12">
-
           <p><?php echo $row['Description'];?></p>
         </div>
       </div>
@@ -76,5 +72,4 @@ while($row=mysqli_fetch_array($query))
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
-
 </html>
