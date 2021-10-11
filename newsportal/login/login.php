@@ -1,6 +1,6 @@
 <?php 
 include('../includes/config.php');
-
+session_start();
 if(isset($_POST['login'])) {
     // Getting username/ email and password
 $uname=$_POST['username'];
@@ -12,7 +12,6 @@ if($num>0){
     $hashpassword=$num['password']; // Hashed password fething from database
     //verifying Password
     if (password_verify($password, $hashpassword)) {
-        session_start();
         $_SESSION['user']=true;
         echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
     } else {
