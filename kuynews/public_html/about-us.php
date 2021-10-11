@@ -60,7 +60,7 @@ while($row=mysqli_fetch_array($query))
       <section class="pa-4">
 
 		<div id="title">
-			<div id="subtitle">Our Works</div>
+			<div id="subtitle">Kenalan Yuk</div>
 			<div id="text">
       Hi Sobat Kuy!
 Selamat datang di website kami "KuyNews".

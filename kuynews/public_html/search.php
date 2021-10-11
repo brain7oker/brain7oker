@@ -18,7 +18,7 @@ include('includes/config.php');
     <link rel="shortcut icon" href="images/title_icon.png">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
@@ -26,7 +26,11 @@ include('includes/config.php');
   </head>
 
   <body>
-
+    <style>
+      body {
+        background-image: url('images/bg1.png');
+      }
+    </style>
     <!-- Navigation -->
    <?php include('includes/header.php');?>
 
