@@ -51,13 +51,14 @@ $name; $captcha;
  <!-- masukkin recaptcha didalem sini
  disinii
 -->
-  <a href="login/index.php"><button class="btn first">As User</button></a>
+  <div class="container">
+      <a href="login/index.php"><button class="btn first">As User</button></a>
 
-  <a href="admin/index.php"><button class="btn first">As Admin</button></a>
-    <!-- Navigation -->
-  <?php include('includes/header.php');?>
-  <?php include('includes/footer.php');?>
-
+      <a href="admin/index.php"><button class="btn first">As Admin</button></a>
+        <!-- Navigation -->
+      <?php include('includes/header.php');?>
+      <?php include('includes/footer.php');?>
+  </div>
   </body>
 
 </html>
