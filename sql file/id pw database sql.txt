@@ -13,3 +13,6 @@ database password LJN4norTX{dk6=Cg
 
 site key recaptcha 6Le0dMAcAAAAADP-OcXjnad2rdx7AAxx1xkSSvnB
 secret key recaptcha 6Le0dMAcAAAAAIb5rXWgqo2jl6RkcqJRK3DIOnBg
+
+id pw fix bangeet
+pw : -buENbIR4[\>jE|Y
