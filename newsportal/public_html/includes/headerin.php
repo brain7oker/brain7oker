@@ -13,9 +13,6 @@
               <a class="nav-link" href="about-us.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact-us.php">Contact us</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="login/logout.php">Logout</a>
             </li>
   

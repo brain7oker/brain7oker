@@ -22,7 +22,7 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="about-us.css" />
+    <link rel="stylesheet" href="css/about-us.css" />
   </head>
 
   <body>
@@ -108,11 +108,9 @@ while($row=mysqli_fetch_array($query))
 	</section>
 <?php } ?>
   
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright © CCFH 2021</p>
-      </div>
-    </footer> 
+    <?php 
+      include('includes/footer.php');
+    ?>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
