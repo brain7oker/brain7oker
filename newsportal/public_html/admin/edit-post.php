@@ -87,11 +87,6 @@ function getSubCat(val) {
              <?php include('includes/leftsidebar.php');?>
             <!-- Left Sidebar End -->
 
-
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -171,13 +166,6 @@ while($result=mysqli_fetch_array($ret))
 
 </select> 
 </div>
-    
-<div class="form-group m-b-20">
-<label for="exampleInputEmail1">Sub Category</label>
-<select class="form-control" name="subcategory" id="subcategory" required>
-<option value="<?php echo htmlentities($row['subcatid']);?>"><?php echo htmlentities($row['subcategory']);?></option>
-</select> 
-</div>
          
 
      <div class="row">
@@ -219,12 +207,6 @@ while($result=mysqli_fetch_array($ret))
            <?php include('includes/footer.php');?>
 
             </div>
-
-
-            <!-- ============================================================== -->
-            <!-- End Right content here -->
-            <!-- ============================================================== -->
-
 
         </div>
         <!-- END wrapper -->
