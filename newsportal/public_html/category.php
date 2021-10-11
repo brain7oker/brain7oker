@@ -18,13 +18,18 @@ include('includes/config.php');
     <link rel="shortcut icon" href="images/title_icon.png">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
   </head>
 
   <body>
+    <style>
+    body {
+      background-image: url('images/bg1.png');
+    }
+    </style>
     <!-- Navigation -->
     <?php 
     if( isset( $_SESSION["user"])){
@@ -33,7 +38,7 @@ include('includes/config.php');
       include('includes/header.php');
     }
     ?>
-
+    
     <!-- Page Content -->
     <div class="container">   
       <div class="row" style="margin-top: 4%">
@@ -68,7 +73,6 @@ else {
 while ($row=mysqli_fetch_array($query)) {
 
 ?>
-<h1><?php echo htmlentities($row['category']);?> News</h1>
           <div class="card mb-4">
             <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
             <div class="card-body">
