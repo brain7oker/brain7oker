@@ -93,7 +93,7 @@ if(isset($_POST['register'])){
                 </div>
 
                 <div id="gender-details">
-                    <label for="ttl">Jenis Kelamin</label>
+                    <label for="gender">Jenis Kelamin</label>
                     <ol>
                         <li>
                             <input type="radio" name="gender" value="1" />Laki-Laki
