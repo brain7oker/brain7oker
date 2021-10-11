@@ -1,0 +1,38 @@
+#text {
+    color: white;
+}
+
+#subtitle {
+    color: white;
+}
+
+#subsubtitle {
+    color: white;
+}
+
+#gridlist {
+    display: flex;
+}
+
+#item {
+    margin-right: 50px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+}
+
+#footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 7%;
+background-color: navy;
+color: white;
+text-align: center;
+padding-top: 12px;
+padding-bottom: 12px;
+}
+
+.subjudul {
+    color: white;
+}
