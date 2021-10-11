@@ -49,7 +49,7 @@ while($row=mysqli_fetch_array($query))
 {
 
 ?>
-      <h1 class="mt-4 mb-3"><?php echo htmlentities($row['PageTitle'])?>
+      <h1 class="mt-4 mb-3 text-center"><?php echo htmlentities($row['PageTitle'])?>
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -62,9 +62,15 @@ while($row=mysqli_fetch_array($query))
 		<div id="title">
 			<div id="subtitle">Our Works</div>
 			<div id="text">
-				Hai semua, Terima Kasih sudah mengujungi web kita. Kami selaku CEO dan CTO serta karyawan dari Catering Maju Jaya mengucapkan semoga kalian puas dengan website ini dan dapat menggunakannya dengan baik.<br>
-				Sedikit Cerita mengenai Catering Maju Jaya. Catering Maju Jaya diciptakan oleh 2 orang yang sekarang menjabat sebagai CEO dan CTO di Catering Maju Jaya. Mereka mengembangkan usaha ini dengan tujuan mendapatkan nilai dari mata kuliah PTI di UNIVERSITAS MULTIMEDIA NUSANTARA.<br>
-				Usaha Catering Maju Jaya ini kami harap menjadi usaha yang sangat sukses di Tangerang dan akhirnya melebarkan sayap ke seluruh nusantara dan menjadi catering nomor 1 di Indonesia.
+      Hi Sobat Kuy!
+      Selamat datang di website kami "KuyNews".
+      Kami ingin mengucapkan terima kasih kepada kalian yang sudah mengunjungi website kami. 
+      Website "KuyNews" diciptakan oleh 4 mahasiswa Universitas Multimedia Nusantara yang terdiri dari Henry Laufrans, Charlie Frederico, Christian Alexander Andrue, dan Ferdy Willy. </br></br>
+
+      KuyNews berasal dari gabungan 2 kata, yaitu "Kuy" dan "News". Kuy yang berarti mengajak dan News yang berarti berita. Jika digabungkan menjadi "KuyNews" yang berarti mengajak untuk membaca/menulis berita.
+      Kuynews merupakan website yang bertujuan untuk mencari berita terkini dengan keterangan dan sumber yang jelas. 
+
+      Website KuyNews ini kami harap bisa menjadi salah satu website berita terbaik dengan isi berita yang berkualitas di Indonesia.
 			</div><br>
 		</div>
 

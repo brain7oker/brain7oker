@@ -39,15 +39,7 @@
                                      <li><a href="trash-posts.php">Trash Posts</a></li>
                                 </ul>
                             </li>  
-                     
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="aboutus.php">About us</a></li>
-                                    <li><a href="contactus.php">Contact us</a></li>
-                                </ul>
-                            </li>
+                    
    <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Comments </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
@@ -63,7 +55,7 @@
 
                     <div class="help-box">
                         <h5 class="text-muted m-t-0">For Help ?</h5>
-                        <p class=""><span class="text-custom">Email:</span> <br/> phpgurukulofficial@gmail.com</p>
+                        <p class=""><span class="text-custom">Email:</span> <br/> ccfh@gmail.com</p>
                     </div>
 
                 </div>
