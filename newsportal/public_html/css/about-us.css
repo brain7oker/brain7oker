@@ -17,8 +17,8 @@
 #item {
     margin-right: 30px;
     margin-left: 30px;
-    margin-bottom: 100px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 img {
@@ -32,6 +32,7 @@ img {
 
 .subjudul {
     color: white;
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
