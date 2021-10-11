@@ -9,6 +9,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -75,14 +76,14 @@ while($row=mysqli_fetch_array($query))
 
 			  <div id="item">
 			  	
-			  	<img src="gambar/charlie.jpg" alt="Image" height="200" width="200">
+			  	<img src="gambar/charlie.jpg" alt="Image" height="200" width="150" style="width:100%;">
 			  	<p class="subjudul">Charlie Frederico</p>
 
 			  </div>
 
 			  <div id="item">
 			  	
-			  	<img src="gambar/henry.jpg" alt="Image" height="200" width="200">
+			  	<img src="gambar/henry.jpg" alt="Image" height="200" width="150" style="width:100%;">
 
 			  	<p class="subjudul">Henry Laufrans</p>
 
@@ -90,14 +91,14 @@ while($row=mysqli_fetch_array($query))
 
 			  <div id="item">
 			  	
-				<img src="gambar/christian.png" alt="Image" height="200" width="200">
+				<img src="gambar/christian.png" alt="Image" height="200" width="150" style="width:100%;">
 				<p class="subjudul">Christian Alexander</p>
 
 			</div>
 
         <div id="item">
 			  	
-			  	<img src="gambar/ferdy.jpg" alt="Image" height="200" width="200">
+			  	<img src="gambar/ferdy.jpg" alt="Image" height="200" width="150" style="width:100%;">
 			  	<p class="subjudul">Ferdy Willy</p>
 
 			  </div>
@@ -106,13 +107,14 @@ while($row=mysqli_fetch_array($query))
 		</div>
 	</section>
 <?php } ?>
-
+  
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright © CCFH 2021</p>
+      </div>
+    </footer> 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
   </body>
-    <footer class="py-5 bg-dark">Copyright © CCFH 2021
-      <div class="container"></div>
-    </footer>
 </html>
