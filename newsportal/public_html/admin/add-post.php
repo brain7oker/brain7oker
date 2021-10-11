@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('includes/config.php');
+include('../includes/config.php');
 error_reporting(0);
 if(strlen($_SESSION['login'])==0)
   { 
@@ -81,7 +81,7 @@ $error="Something went wrong . Please try again.";
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
- <script>
+<!-- <script>
 function getSubCat(val) {
   $.ajax({
   type: "POST",
@@ -92,7 +92,7 @@ function getSubCat(val) {
   }
   });
   }
-  </script>
+  </script>-->
     </head>
 
 
@@ -191,13 +191,6 @@ function getSubCat(val) {
                             <label for="exampleInputEmail1">Penulis</label>
                             <input type="text" class="form-control" id="writer" name="writer" placeholder="Enter Writer Name" required>
                         </div>
-                        
-                        <div class="form-group m-b-20">
-                            <label for="exampleInputEmail1">Sub Category</label>
-                            <select class="form-control" name="subcategory" id="subcategory" required>
-
-                            </select> 
-                    </div>
                             
 
                     <div class="row">
