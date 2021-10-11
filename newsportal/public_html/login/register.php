@@ -53,8 +53,8 @@ if(isset($_POST['register'])){
 <body>
 
 <div id="container">
-    <div class="title">
-        <div class="content">
+    <div id="title">
+        <div id="content">
 
         <p>&larr; <a href="index.php">Home</a>
 
@@ -109,7 +109,7 @@ if(isset($_POST['register'])){
                     <input type="file" class="form-control" id="userimg" name="userimg" ></br>
                 </div>
 
-                <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
+                <input type="submit" id="btn-btn-success-btn-block" name="register" value="Daftar" />
 
             </div>   
         </form>
