@@ -63,14 +63,14 @@ while($row=mysqli_fetch_array($query))
 			<div id="subtitle">Our Works</div>
 			<div id="text">
       Hi Sobat Kuy!
-      Selamat datang di website kami "KuyNews".
-      Kami ingin mengucapkan terima kasih kepada kalian yang sudah mengunjungi website kami. 
-      Website "KuyNews" diciptakan oleh 4 mahasiswa Universitas Multimedia Nusantara yang terdiri dari Henry Laufrans, Charlie Frederico, Christian Alexander Andrue, dan Ferdy Willy. </br></br>
+Selamat datang di website kami "KuyNews".
+Kami ingin mengucapkan terima kasih kepada kalian yang sudah mengunjungi website kami. 
+Website "KuyNews" diciptakan oleh 4 mahasiswa Universitas Multimedia Nusantara yang terdiri dari Henry Laufrans, Charlie Frederico, Christian Alexander Andrue, dan Ferdy Willy. 
+</br></br>
+KuyNews berasal dari gabungan 2 kata, yaitu "Kuy" dan "News". Kuy yang berarti mengajak dan News yang berarti berita. Jika digabungkan menjadi "KuyNews" yang berarti mengajak untuk membaca/menulis berita.
+Kuynews merupakan website yang bertujuan untuk mencari berita terkini dengan keterangan dan sumber yang jelas. 
 
-      KuyNews berasal dari gabungan 2 kata, yaitu "Kuy" dan "News". Kuy yang berarti mengajak dan News yang berarti berita. Jika digabungkan menjadi "KuyNews" yang berarti mengajak untuk membaca/menulis berita.
-      Kuynews merupakan website yang bertujuan untuk mencari berita terkini dengan keterangan dan sumber yang jelas. 
-
-      Website KuyNews ini kami harap bisa menjadi salah satu website berita terbaik dengan isi berita yang berkualitas di Indonesia.
+Website KuyNews ini kami harap bisa menjadi salah satu website berita terbaik dengan isi berita yang berkualitas di Indonesia.
 			</div><br>
 		</div>
 

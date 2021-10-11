@@ -44,7 +44,15 @@ else{
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <a href="index.html" class="logo"><span>NP<span>Admin</span></span><i class="mdi mdi-layers"></i></a>
-                    
+                    <!-- Image logo -->
+                    <!--<a href="index.html" class="logo">-->
+                        <!--<span>-->
+                            <!--<img src="assets/images/logo.png" alt="" height="30">-->
+                        <!--</span>-->
+                        <!--<i>-->
+                            <!--<img src="assets/images/logo_sm.png" alt="" height="28">-->
+                        <!--</i>-->
+                    <!--</a>-->
                 </div>
 
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -88,19 +96,20 @@ else{
                         <!-- end row -->
 
                         <div class="row">
-                            <a href="manage-categories.php">
+                        <a href="manage-categories.php">
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
                                     <i class="mdi mdi-chart-areaspline widget-one-icon"></i>
                                     <div class="wigdet-one-content">
                                         <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Categories Listed</p>
-                                            <?php $query=mysqli_query($con,"select * from tblcategory where Is_Active=1");
-                                            $countcat=mysqli_num_rows($query);?>
+                                        <?php $query=mysqli_query($con,"select * from tblcategory where Is_Active=1");
+                                        $countcat=mysqli_num_rows($query);
+                                        ?>
                                         <h2><?php echo htmlentities($countcat);?> <small></small></h2>
                                     </div>
                                 </div>
-                            </div></a>
-                            <a href="manage-posts.php">
+                            </div></a>                       
+                            <a href="manage-posts.php">                       
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
                                     <i class="mdi mdi-layers widget-one-icon"></i>
@@ -113,18 +122,19 @@ else{
                                     </div>
                                 </div>
                             </div></a>
-                            <a href="trash-posts.php">
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="card-box widget-box-one">
-                                        <i class="mdi mdi-layers widget-one-icon"></i>
-                                        <div class="wigdet-one-content">
-                                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Trash News</p>
-                                            <?php $query=mysqli_query($con,"select * from tblposts where Is_Active=0");
-                                            $countposts=mysqli_num_rows($query);
-                                            ?>
-                                            <h2><?php echo htmlentities($countposts);?> <small></small></h2>
-                                        </div>
+                            <a href="trash-posts.php"> 
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="card-box widget-box-one">
+                                    <i class="mdi mdi-layers widget-one-icon"></i>
+                                    <div class="wigdet-one-content">
+                                        <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Trash News</p>
+                                        <?php $query=mysqli_query($con,"select * from tblposts where Is_Active=0");
+                                        $countposts=mysqli_num_rows($query);
+                                        ?>
+                                        <h2><?php echo htmlentities($countposts);?> <small></small></h2>
+                              
                                     </div>
+                                </div>
                             </div></a>
                         </div>
 
