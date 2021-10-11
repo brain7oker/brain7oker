@@ -1,7 +1,7 @@
 <?php
 define('DB_SERVER','localhost');
-define('DB_USER','id17741294_ccfh');
-define('DB_PASS' ,'LJN4norTX{dk6=Cg');
+define('DB_USER','root');
+define('DB_PASS' ,'');
 define('DB_NAME','id17741294_kuynews');
 $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
 // Check connection
