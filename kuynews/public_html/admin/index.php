@@ -61,7 +61,11 @@ if(isset($_POST['home'])) {
 
 
     <body class="bg-transparent">
-
+        <style>
+        body {
+        background-image: url('../images/bg1.png');
+        }
+        </style>
         <!-- HOME -->
         <section>
             <div class="container-alt">

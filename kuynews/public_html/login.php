@@ -22,7 +22,7 @@ $name; $captcha;
 <html lang="en">
 
   <head>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -40,6 +40,11 @@ $name; $captcha;
   </head>
 
   <body>
+  <style>
+    body {
+      background-image: url('images/bg1.png');
+    }
+  </style>
   <link href="log.css" rel="stylesheet">
   
  <!-- masukkin recaptcha didalem sini
