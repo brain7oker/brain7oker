@@ -48,7 +48,7 @@ echo "<script>alert('User not registered with us');</script>";
 
                 <div class="row">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="username" placeholder="Username atau email" required/>
+                    <input type="text" name="username" placeholder="Username" required/>
                 </div>
 
                 <div class="row">
