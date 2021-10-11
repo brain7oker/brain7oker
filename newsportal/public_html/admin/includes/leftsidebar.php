@@ -11,11 +11,6 @@
                          
                             </li>
 
-
-
-               
-
-
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Category </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
@@ -49,10 +44,8 @@
                                 </ul>
                             </li>
    <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Comments </span> <span class="menu-arrow"></span></a>
+                                <a href="manage-comments.php" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Comments </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                  <li><a href="unapprove-comment.php">Waiting for Approval </a></li>
-                                    <li><a href="manage-comments.php">Approved Comments</a></li>
                                 </ul>
                             </li>   
 
@@ -63,7 +56,7 @@
 
                     <div class="help-box">
                         <h5 class="text-muted m-t-0">For Help ?</h5>
-                        <p class=""><span class="text-custom">Email:</span> <br/> phpgurukulofficial@gmail.com</p>
+                        <p class=""><span class="text-custom">Email:</span> <br/> ccfh@gmail.com</p>
                     </div>
 
                 </div>
