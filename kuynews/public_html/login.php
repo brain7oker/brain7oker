@@ -17,7 +17,8 @@ $name; $captcha;
     
     $str = "https://www.google.com/recaptcha/api/siteverify?secret=6LeKD10cAAAAALNvwWwEdAVoKhXjkY7WuhB89J5B"."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
 
-    ?>
+    ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 

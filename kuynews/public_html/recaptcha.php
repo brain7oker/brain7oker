@@ -11,7 +11,7 @@
 <body>
     <h1>Google reCAPTCHA</h1>
     <form id="comment_form" action="login.php" method="post">
-        <div class="g-recaptcha" data-sitekey="6Le0dMAcAAAAADP-OcXjnad2rdx7AAxx1xkSSvnB" style="margin: bottom 10px;"></div><br>
+        <div class="g-recaptcha" data-sitekey="6LeKD10cAAAAAN494PmOrI7jK77gZYkUyzkruI32" style="margin: bottom 10px;"></div><br>
         <input type="submit" name="submit" value="Submit">
     </form>
 </body>
