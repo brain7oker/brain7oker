@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google reCAPTCHA</title>
+    <link rel="shortcut icon" href="images/title_icon.png">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <h1>Google reCAPTCHA</h1>
+    <form id="comment_form" action="login.php" method="post">
+        <div class="g-recaptcha" data-sitekey="6Le0dMAcAAAAADP-OcXjnad2rdx7AAxx1xkSSvnB" style="margin: bottom 10px;"></div><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>

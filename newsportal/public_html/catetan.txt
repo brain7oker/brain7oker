@@ -1,0 +1,51 @@
+secret key recaptcha 
+secret key 6LdjtKccAAAAAE2MFXa-4ihXI8fwGCzb6hlsxebY
+
+id : recaptcha
+<?php
+    $name; $captcha;
+    if(isset($_POST['name'])) $name = $_POST['name'];
+    if(isset($_POST['g-recaptcha-response'])) $captcha = $_POST['g-recaptcha-response'];
+
+    if(!$captcha){
+        echo "<h2>Please check the captcha form</h2>";
+        return;
+    }
+    
+    $str = "https://www.google.com/recaptcha/api/siteverify?secret=6LeKD10cAAAAALNvwWwEdAVoKhXjkY7WuhB89J5B"."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
+    $response =file_get_contents($str);
+    $response_arr=(array) json_decode($response);
+
+    if($response_arr["success"]==false)
+        echo "<h2>You are spammer ! GET OUT</h2>";
+?>
+
+header ganti ke recaptcha
+
+kategori berita :
+1. health
+2. politik
+3. olahraga
+4. ekonomi
+5. otomotif
+6. pendidikan
+
+masukin di register user
+$sql = "INSERT INTO users (name, username, email, password) 
+            VALUES (:name, :username, :email, :password)";
+    $stmt = $db->prepare($sql);
+
+    // bind parameter ke query
+    $params = array(
+        ":name" => $name,
+        ":username" => $username,
+        ":password" => $password,
+        ":email" => $email
+    );
+
+    // eksekusi query untuk menyimpan ke database
+    $saved = $stmt->execute($params);
+
+    // jika query simpan berhasil, maka user sudah terdaftar
+    // maka alihkan ke halaman login
+    if($saved) header("Location: login.php");
