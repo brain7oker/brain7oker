@@ -5,7 +5,7 @@ if(isset($_SESSION['logindulu'])){
   echo "<script>alert('Silahkan Login as User jika mau komen ya!');</script>";
   session_destroy();
 }
-/*
+
 $name; $captcha;
     if(isset($_POST['name'])) $name = $_POST['name'];
     if(isset($_POST['g-recaptcha-response'])) $captcha = $_POST['g-recaptcha-response'];
@@ -16,7 +16,7 @@ $name; $captcha;
     }
     
     $str = "https://www.google.com/recaptcha/api/siteverify?secret=6LeKD10cAAAAALNvwWwEdAVoKhXjkY7WuhB89J5B"."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'];
-*/
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
