@@ -4649,8 +4649,8 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
-  background-color: #fff;
+  color: white;
+  background-color: #00162c;
   border: 1px solid #dee2e6;
 }
 
@@ -4659,7 +4659,7 @@ input[type="button"].btn-block {
   color: #0056b3;
   text-decoration: none;
   background-color: #e9ecef;
-  border-color: #dee2e6;
+  border-color: #d5d6d8;
 }
 
 .page-link:focus {
@@ -4685,7 +4685,7 @@ input[type="button"].btn-block {
 
 .page-item.active .page-link {
   z-index: 1;
-  color: #fff;
+  color: #00162c;
   background-color: #007bff;
   border-color: #007bff;
 }
@@ -4694,7 +4694,7 @@ input[type="button"].btn-block {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
-  background-color: #fff;
+  background-color: #00162c;
   border-color: #dee2e6;
 }
 
